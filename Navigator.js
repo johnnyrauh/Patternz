@@ -16,14 +16,14 @@ const Navi = StackNavigator({
   }
 })
 
-const Navigator = ({ navigation, save, onChangeText, onNewItem, onPress, completedItems, items, item}) => (
+const Navigator = ({ navigation, save, onChangeText, onNewItem, completeTask, completedItems, items, item}) => (
   <Navi
     navigation={navigation}
     screenProps={{
       save,
       onChangeText,
       onNewItem,
-      onPress,
+      completeTask,
       completedItems,
       items,
       item

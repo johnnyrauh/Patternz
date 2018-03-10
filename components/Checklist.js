@@ -1,11 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View, TextInput, TouchableOpacity, AsyncStorage, Button, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, TextInput, TouchableOpacity, Button, ScrollView} from 'react-native';
 
 
 export default class Checklist extends React.Component {
 
   render() {
-    console.log('this.props: ', this.props);
     return (
       <View style={styles.container}>
         <View style={styles.titleContainer}  >
@@ -14,7 +13,6 @@ export default class Checklist extends React.Component {
         <TextInput
           style={styles.textInput}
           onSubmitEditing={() => {
-            console.log('firing onSubmitEditing')
             this.props.screenProps.onNewItem()
           }}
           placeholder='Add New Task'
@@ -27,9 +25,8 @@ export default class Checklist extends React.Component {
             <View key={item} style={styles.item}>
               <Text style={styles.itemText}>{item}</Text>
               <TouchableOpacity style={styles.doneButton}
-              // add function to Onpress
                 onPress={() => {
-                  this.props.screenProps.onPress(item)
+                  this.props.screenProps.completeTask(item)
                 }}
                 >
                 <Text>Done</Text>
@@ -37,7 +34,9 @@ export default class Checklist extends React.Component {
             </View>
           ))}
         </ScrollView>
-        <Button onPress={() => this.props.navigation.navigate('Data', {percent: 100})} title="Data" />
+        <View style={{padding: 50}}>
+          <Button onPress={() => this.props.navigation.navigate('Data')} title="Data" />
+        </View>
       </View>
     );
   }

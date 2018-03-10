@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button, Image} from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
 window.navigator.userAgent = 'react-native';
 
@@ -11,7 +11,6 @@ export default class Home extends Component {
   }
 
   render() {
-    console.log('this.props: ', this.props)
     return (
       <View style={styles.container}>
         <Text style={styles.text1}>Welcome to Patternz!</Text>
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
   },
   text1: {
     fontSize: 20,
-    padding: 5
+    padding: 5,
   },
   text2: {
     fontSize: 20,

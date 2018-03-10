@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigator from './Navigator.js'
-import {StyleSheet, Text, View, ListView, TextInput, TouchableOpacity, AsyncStorage, Button} from 'react-native';
+import { AsyncStorage } from 'react-native';
 
 
 export default class App extends React.Component {
@@ -13,12 +13,13 @@ export default class App extends React.Component {
     }
     this.onChangeText = this.onChangeText.bind(this)
     this.onNewItem = this.onNewItem.bind(this)
-    this.onPress = this.onPress.bind(this)
+    this.completeTask = this.completeTask.bind(this)
     this.save = this.save.bind(this)
   }
 
       // await AsyncStorage.setItem('@MySuperStore:key', 'I like to save it.');
   componentDidMount() {
+    AsyncStorage.clear()
     AsyncStorage.getItem('items')
       .then(items => {
         if (items) {
@@ -41,14 +42,12 @@ export default class App extends React.Component {
   }
 
   onChangeText = text => {
-    console.log('text: ', text)
     this.setState({
       item: text
     })
   }
 
   onNewItem = () => {
-    console.log('item: ', this.state.item)
     const arr = [this.state.item, ...this.state.items];
     this.setState({
       items: arr,
@@ -66,8 +65,7 @@ export default class App extends React.Component {
     AsyncStorage.setItem('completedItems', JSON.stringify(complete))
   }
 
-// complete tast name
-  onPress = (task) => {
+  completeTask = (task) => {
     const itemsMinusOne = this.state.items.filter(item => {
       return item !== task
     })
@@ -85,7 +83,7 @@ export default class App extends React.Component {
         save={this.save}
         onChangeText={this.onChangeText}
         onNewItem={this.onNewItem}
-        onPress={this.onPress}
+        completeTask={this.completeTask}
         completedItems={this.state.completedItems}
         items={this.state.items}
         item={this.state.item}
