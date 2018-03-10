@@ -39,8 +39,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white'
   },
   text1: {
-    fontSize: 20,
+    fontSize: 27,
     padding: 5,
+    fontFamily: 'Futura-CondensedExtraBold',
+    color: '#222'
   },
   text2: {
     fontSize: 20,
