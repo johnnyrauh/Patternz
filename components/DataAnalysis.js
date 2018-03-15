@@ -25,20 +25,20 @@ export default class Data extends React.Component {
           bgColor="#fff"
           >
           <Text style={{ fontSize: 25, alignContent: 'center'}}>{
-            (this.props.screenProps.completedItems.length /
-              (this.props.screenProps.completedItems.length + this.props.screenProps.items.length)) * 100
-          }%</Text>
+            Math.round((this.props.screenProps.completedItems.length /
+              (this.props.screenProps.completedItems.length + this.props.screenProps.items.length) * 100
+            ))}%</Text>
         </ProgressCircle >
           <Text style={{padding: 15, fontSize: 15, paddingTop: 45}}>Make a Difference Campaign</Text>
           <ProgressCircle
-          percent={((this.props.screenProps.completedItems.length / 100) * 100)}
+          percent={((Math.round(this.props.screenProps.completedItems.length / 100)) * 100)}
           radius={100}
           borderWidth={8}
           color="red"
           shadowColor="#999"
           bgColor="#fff"
           >
-          <Text style={{ fontSize: 25}}>{((this.props.screenProps.completedItems.length / 100) * 100)}%</Text>
+          <Text style={{ fontSize: 25}}>{((this.props.screenProps.completedItems.length / 100)) * 100}%</Text>
         </ProgressCircle>
         </View>
       </View>

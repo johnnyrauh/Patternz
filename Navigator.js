@@ -1,8 +1,8 @@
-import React from 'react';
-import Home from './components/Home'
-import DataAnalysis from './components/DataAnalysis'
-import Checklist from './components/Checklist'
-import { StackNavigator } from 'react-navigation'
+import React from "react";
+import Home from "./components/Home";
+import DataAnalysis from "./components/DataAnalysis";
+import Checklist from "./components/Checklist";
+import { StackNavigator } from "react-navigation";
 
 const Navi = StackNavigator({
   Main: {
@@ -14,9 +14,18 @@ const Navi = StackNavigator({
   Data: {
     screen: DataAnalysis
   }
-})
+});
 
-const Navigator = ({ navigation, save, onChangeText, onNewItem, completeTask, completedItems, items, item}) => (
+const Navigator = ({
+  navigation,
+  save,
+  onChangeText,
+  onNewItem,
+  completeTask,
+  completedItems,
+  items,
+  item
+}) => (
   <Navi
     navigation={navigation}
     screenProps={{
@@ -27,7 +36,8 @@ const Navigator = ({ navigation, save, onChangeText, onNewItem, completeTask, co
       completedItems,
       items,
       item
-    }} />
-)
+    }}
+  />
+);
 
 export default Navigator;
