@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   StyleSheet,
   Text,
@@ -7,8 +7,8 @@ import {
   TextInput,
   TouchableOpacity,
   ProgressViewIOS
-} from 'react-native';
-import ProgressCircle from 'react-native-progress-circle';
+} from "react-native";
+import ProgressCircle from "react-native-progress-circle";
 
 export default class Data extends React.Component {
   render() {

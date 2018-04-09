@@ -3,6 +3,8 @@
 A simple to-do app built with React Native that transforms your everyday tasks into positive impact.
 For every 100 tasks completed the user is able to donate $5 to a charity of their choosing.
 
+Demo: https://www.youtube.com/watch?v=DOBpwWpBZs8
+
 ### `npm start`
 
 Runs your app in development mode.

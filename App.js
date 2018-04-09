@@ -7,7 +7,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       items: [],
-      item: '',
+      item: "",
       completedItems: []
     };
     this.onChangeText = this.onChangeText.bind(this);
@@ -57,7 +57,7 @@ export default class App extends React.Component {
 
   save = (arr, complete = this.state.completedItems) => {
     this.setState({
-      item: ''
+      item: ""
     });
     AsyncStorage.setItem("items", JSON.stringify(arr));
     AsyncStorage.setItem("completedItems", JSON.stringify(complete));
