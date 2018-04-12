@@ -75,12 +75,6 @@ export default class Data extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "stretch",
-    justifyContent: "flex-start"
-  },
   titleContainer: {
     padding: 10,
     paddingTop: 15,
