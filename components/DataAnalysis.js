@@ -45,8 +45,7 @@ export default class Data extends React.Component {
               {Math.round(
                 this.props.screenProps.completedItems.length /
                   (this.props.screenProps.completedItems.length +
-                    this.props.screenProps.items.length) *
-                  100
+                    this.props.screenProps.items.length) * 100
               )}%
             </Text>
           </ProgressCircle>
