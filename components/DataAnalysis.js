@@ -32,8 +32,7 @@ export default class Data extends React.Component {
             percent={
               this.props.screenProps.completedItems.length /
               (this.props.screenProps.completedItems.length +
-                this.props.screenProps.items.length) *
-              100
+                this.props.screenProps.items.length) * 100
             }
             radius={100}
             borderWidth={8}
